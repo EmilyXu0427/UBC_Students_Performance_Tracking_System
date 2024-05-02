@@ -15,6 +15,14 @@
             "finalPerformance": "A",
             "midtermGrade": 30,
             "finalExamGrade": 40
+        },
+        {
+            "studentID": 30047489,
+            "totalGrade": 99,
+            "projectGrade": 20,
+            "finalPerformance": "A",
+            "midtermGrade": 29,
+            "finalExamGrade": 50
         }
     ],
     "term": "2020Winter1"

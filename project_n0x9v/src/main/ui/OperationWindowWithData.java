@@ -127,7 +127,8 @@ public class OperationWindowWithData implements ActionListener {
     public void setUpHeaderPanel() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("./data/UBC logo.JPG"));
+//            myPicture = ImageIO.read(new File("./data/UBC logo.JPG"));
+            myPicture = ImageIO.read(new File("./project_n0x9v/data/UBC logo.JPG"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -235,7 +236,7 @@ public class OperationWindowWithData implements ActionListener {
     // EFFECTS: import previous saved data from Json file to Jtable
     public void importData() {
         try {
-            JsonReader jsonReader = new JsonReader("./data/ProjectData.json");
+            JsonReader jsonReader = new JsonReader("./project_n0x9v/data/ProjectData.json");
             students = jsonReader.read();
         } catch (IOException ex) {
             throw new RuntimeException(ex);
@@ -260,7 +261,7 @@ public class OperationWindowWithData implements ActionListener {
 
     // EFFECTS: save the updated data from Jtable to Jason file
     public void saveData() {
-        JsonWriter jsonWriter = new JsonWriter("./data/ProjectData.json");
+        JsonWriter jsonWriter = new JsonWriter("./project_n0x9v/data/ProjectData.json");
 
         try {
             jsonWriter.open();
