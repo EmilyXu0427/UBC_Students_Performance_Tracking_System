@@ -1,2 +1,2 @@
-# Personal-Project
-UBC Student Management System
+# Personal_Project: UBC_Student_Management_System
+
