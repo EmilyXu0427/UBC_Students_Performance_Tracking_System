@@ -1,0 +1,21 @@
+{
+    "students": [
+        {
+            "studentID": 30047420,
+            "totalGrade": 100,
+            "projectGrade": 25,
+            "finalPerformance": "A",
+            "midtermGrade": 35,
+            "finalExamGrade": 40
+        },
+        {
+            "studentID": 30047415,
+            "totalGrade": 70,
+            "projectGrade": 15,
+            "finalPerformance": "C",
+            "midtermGrade": 25,
+            "finalExamGrade": 30
+        }
+    ],
+    "term": "2020Winter1"
+}

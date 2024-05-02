@@ -1,0 +1,21 @@
+{
+    "students": [
+        {
+            "studentID": 30047420,
+            "totalGrade": 95,
+            "projectGrade": 20,
+            "finalPerformance": "A",
+            "midtermGrade": 35,
+            "finalExamGrade": 40
+        },
+        {
+            "studentID": 30047418,
+            "totalGrade": 60,
+            "projectGrade": 10,
+            "finalPerformance": "D",
+            "midtermGrade": 25,
+            "finalExamGrade": 25
+        }
+    ],
+    "term": "My Term"
+}
