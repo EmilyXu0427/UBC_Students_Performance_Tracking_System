@@ -58,6 +58,9 @@ public class OperationWindowWithData implements ActionListener {
 
     private JOptionPane showMessageDialog;
 
+    public String jsonFilePath = "./project_n0x9v/data/ProjectData.json";
+    public String logoFilePath = "./project_n0x9v/data/UBC logo.JPG";
+
     // EFFECTS: construct an operation window with previous saved data
     public OperationWindowWithData() {
         windowSetUp();
@@ -128,7 +131,8 @@ public class OperationWindowWithData implements ActionListener {
         BufferedImage myPicture = null;
         try {
 //            myPicture = ImageIO.read(new File("./data/UBC logo.JPG"));
-            myPicture = ImageIO.read(new File("./project_n0x9v/data/UBC logo.JPG"));
+            myPicture = ImageIO.read(new File(logoFilePath));
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -236,7 +240,7 @@ public class OperationWindowWithData implements ActionListener {
     // EFFECTS: import previous saved data from Json file to Jtable
     public void importData() {
         try {
-            JsonReader jsonReader = new JsonReader("./project_n0x9v/data/ProjectData.json");
+            JsonReader jsonReader = new JsonReader(jsonFilePath);
             students = jsonReader.read();
         } catch (IOException ex) {
             throw new RuntimeException(ex);
@@ -261,7 +265,7 @@ public class OperationWindowWithData implements ActionListener {
 
     // EFFECTS: save the updated data from Jtable to Jason file
     public void saveData() {
-        JsonWriter jsonWriter = new JsonWriter("./project_n0x9v/data/ProjectData.json");
+        JsonWriter jsonWriter = new JsonWriter(jsonFilePath);
 
         try {
             jsonWriter.open();
