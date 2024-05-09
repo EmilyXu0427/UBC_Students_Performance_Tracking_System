@@ -19,6 +19,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.List;
 
 /* Operation window interface displays previously saved data, buttons, text fields, for user to add, find, remove
@@ -263,7 +267,7 @@ public class OperationWindowWithData implements ActionListener {
         studentsTable = new JTable(model);
     }
 
-    // EFFECTS: save the updated data from Jtable to Jason file
+    // EFFECTS: save updated data from Jtable to Jason file
     public void saveData() {
         JsonWriter jsonWriter = new JsonWriter(jsonFilePath);
 
@@ -273,6 +277,55 @@ public class OperationWindowWithData implements ActionListener {
             jsonWriter.close();
         } catch (FileNotFoundException e) {
             System.out.println("Unable to write to file: ./data/ProjectData.json");
+        }
+    }
+
+    // EFFECTS: save updated data from Jtable to mySQL database
+    public void saveDataToMySQL() {
+        String url = "jdbc:mysql://localhost:3306/UBCstudents";
+        String username = "root";
+        String password = "xurenbo880427";
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            Connection connection = DriverManager.getConnection(url, username, password);
+
+            //Delete the mySQL table content
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("TRUNCATE TABLE students");
+
+            if (students != null) {
+                List<Student> stu = students.getStudents();
+                for (int i = 0; i < stu.size(); i++) {
+                    int stuID = stu.get(i).getStudentID();
+                    double stuProjectGrade = stu.get(i).getProjectGrade();
+                    double stuMidtermGrade = stu.get(i).getMidtermGrade();
+                    double stuFinalExamGrade = stu.get(i).getFinalExamGrade();
+                    double stuTotalGrade = stu.get(i).getTotalGrade();
+                    String stuFinalPerformance = stu.get(i).getFinalPerformance();
+
+                    // SQL query
+                    String sqlQuery = "INSERT INTO students (studentID, totalGrade, projectGrade, finalPerformance, midtermGrade, finalExamGrade) " +
+                            "VALUES (?, ?, ?, ?, ?, ?)";
+
+                    // Establish a connection
+                    PreparedStatement pstmt = connection.prepareStatement(sqlQuery);
+
+                    // Set parameters for the PreparedStatement
+                    pstmt.setInt(1, stuID);
+                    pstmt.setDouble(2, stuTotalGrade);
+                    pstmt.setDouble(3, stuProjectGrade);
+                    pstmt.setString(4, stuFinalPerformance);
+                    pstmt.setDouble(5, stuMidtermGrade);
+                    pstmt.setDouble(6, stuFinalExamGrade);
+
+                    // Execute the SQL query
+                    pstmt.executeUpdate();
+                }
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
@@ -286,7 +339,8 @@ public class OperationWindowWithData implements ActionListener {
                 "Save Data",
                 JOptionPane.YES_NO_OPTION);
         if (option == JOptionPane.YES_NO_OPTION) {
-            saveData();
+            saveData(); //save data to JSON format
+            saveDataToMySQL(); //save data to mySQL database
         }
 
         for (Event next : EventLog.getInstance()) {

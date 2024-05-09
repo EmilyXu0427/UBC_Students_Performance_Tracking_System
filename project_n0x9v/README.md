@@ -39,7 +39,7 @@ This application is mainly designed for professors to store and evaluate the inf
 - When you enter the operation window (where you do all the add, find, remove student functions), you can find a UBC logo on top of the window.
 ## You can save the state of my application by:
 - When you finish and try to exit the application. You can click the cross button in the up right corner. A dialog box will prompt up and ask if you want to save the data;
-- If you choose Yes, the changes will be saved to Json file. You can find this file by going to "./data/ProjectData.json".
+- If you choose Yes, the changes will be saved to Json file and mySQL database. You can find this file by going to "./data/ProjectData.json", as well as login mySQL.
 - If you choose No, the changes will not be saved. 
 ## You can reload the state of my application by:
 - If you choose to save your data. Next time when you start the application, the application will first ask you if you want to load the previous data, you can click Yes. Then the previous saved data will be loaded.

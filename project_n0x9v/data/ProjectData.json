@@ -1,29 +1,11 @@
 {
-    "students": [
-        {
-            "studentID": 30047900,
-            "totalGrade": 73,
-            "projectGrade": 18,
-            "finalPerformance": "C",
-            "midtermGrade": 25,
-            "finalExamGrade": 30
-        },
-        {
-            "studentID": 30047901,
-            "totalGrade": 90,
-            "projectGrade": 20,
-            "finalPerformance": "A",
-            "midtermGrade": 30,
-            "finalExamGrade": 40
-        },
-        {
-            "studentID": 30047489,
-            "totalGrade": 99,
-            "projectGrade": 20,
-            "finalPerformance": "A",
-            "midtermGrade": 29,
-            "finalExamGrade": 50
-        }
-    ],
+    "students": [{
+        "studentID": 30047428,
+        "totalGrade": 75,
+        "projectGrade": 25,
+        "finalPerformance": "C",
+        "midtermGrade": 20,
+        "finalExamGrade": 30
+    }],
     "term": "2020Winter1"
 }

@@ -51,8 +51,7 @@ public class WelcomeWindow implements ActionListener {
         if (e.getSource() == noLoadButton) {
             new OperationWindowWithNoData();
         } else {
-//            new OperationWindowWithData();
-            new OperationWindowWithSQLDataBase();
+            new OperationWindowWithData();
         }
     }
 }
