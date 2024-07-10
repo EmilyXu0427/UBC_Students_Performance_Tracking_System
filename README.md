@@ -22,7 +22,7 @@ This application should be able to carry out the following functions:  <br>
 
 ✅ Load previously saved data into system when the user start the app <br>
 ✅ User can enter student's information, such as StudentID, and student's grades of project, midterm exam & final exam <br>
-✅ Total grade and total performance (A, B, C, D, F) are calculated based on the provided grades.<br>
+✅ Total grade and final performance (A, B, C, D, F) are calculated based on the provided grades.<br>
 ✅ Professor can use this app to add, find, and delete students (using StudentID) from the list.<br>
 ✅ Provide options for user to save the changes or not when exit the app<br>
 ✅ Print event log to the console after exit<br>
@@ -31,10 +31,17 @@ This application should be able to carry out the following functions:  <br>
 <h2/>Snapshot of Apps</h2>
 </div>
 
-![image](https://github.com/EmilyXu0427/UBC_Students_Performance_Tracking_System/assets/155400414/36fa543e-b6d7-4b2e-b448-59e41e5656c6)
-![image](https://github.com/EmilyXu0427/UBC_Students_Performance_Tracking_System/assets/155400414/c8df2add-ecfa-4ddd-b19c-35cc762ac25e)
-![image](https://github.com/EmilyXu0427/UBC_Students_Performance_Tracking_System/assets/155400414/8fcb8d1e-260a-46c5-838c-a437a90cc82b)
+<div align="center">
+<img src="https://github.com/EmilyXu0427/UBC_Students_Performance_Tracking_System/assets/155400414/36fa543e-b6d7-4b2e-b448-59e41e5656c6" width="800" height="800">
+</div>
 
+<div align="center">
+<img src="https://github.com/EmilyXu0427/UBC_Students_Performance_Tracking_System/assets/155400414/c8df2add-ecfa-4ddd-b19c-35cc762ac25e" width="800" height="700">
+</div>
+
+<div align="center">
+<img src="https://github.com/EmilyXu0427/UBC_Students_Performance_Tracking_System/assets/155400414/8fcb8d1e-260a-46c5-838c-a437a90cc82b" width="500" height="700">
+</div>
 
 
 
