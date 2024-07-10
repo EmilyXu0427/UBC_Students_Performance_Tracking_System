@@ -34,7 +34,7 @@ Java (Swing)
 <br>
 <br>
 <div>
-<h2/>Snapshot of Apps</h2>
+<h2/>Snapshot of App</h2>
 </div>
 
 <div align="center">
