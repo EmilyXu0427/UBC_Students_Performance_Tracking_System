@@ -13,7 +13,7 @@
 Computer Science is a practical subject including both theory knowledge and hands-on practices. Therefore, the course design can be very challenging and usually includes various components such as lectures and labs. With hundreds of students taking this course every year, it is difficult to tell how students doing in this course, and how the knowledge and information have been absorbed by the students. Are they doing well/bad in particular session? Which session the professor should put more information or practice so the students can absorb the inforamation more effectively and efficiently? The purpose of this system is to provide insight for professors on the student's performance in this course.  
 <br>
 <div>
-<h2/>End user and potential functions</h2>
+<h2/>End user functions</h2>
 </div>
     
 This application is mainly designed for professors to store and evaluate the information of students for CPSC 210 course. <br>
