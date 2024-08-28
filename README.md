@@ -30,7 +30,7 @@ This application should be able to carry out the following functions:  <br>
 <div>
 <h2/>Programming Language | Library | Framework</h2>
 </div>
-Java (Swing)
+Java (Swing), JUnit
 <br>
 <br>
 <div>
